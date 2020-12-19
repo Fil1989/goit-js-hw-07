@@ -1,0 +1,7 @@
+.flexbox {
+  display: flex;
+  list-style-type: none;
+}
+.imageform {
+  object-fit: contain;
+}
