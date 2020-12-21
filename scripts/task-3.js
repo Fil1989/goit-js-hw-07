@@ -16,32 +16,32 @@ const images = [
   },
 ];
 
-const insertImages = images
-  .map(element => {
-    const image = document.createElement('img');
-    image.src = element.url;
-    image.alt = element.alt;
-    image.setAttribute('width', '90%');
-    image.setAttribute('height', '100%');
-    return `<li>${image}</li>`;
-  })
-  .reduce((accum, element) => {
-    return (accum += element);
-  }, '');
-
-let gallery = document.querySelector('#gallery');
-gallery.insertAdjacentHTML('afterbegin', insertImages);
-
-// images.forEach(element => {
-//   let gallery = document.querySelector('#gallery');
-//   gallery.insertAdjacentHTML('afterbegin', '<li></li>');
-//   gallery.classList.add('flexbox');
-
+// const insertImages = images.map(element => {
 //   const image = document.createElement('img');
 //   image.src = element.url;
 //   image.alt = element.alt;
 //   image.setAttribute('width', '90%');
 //   image.setAttribute('height', '100%');
-
-//   gallery.querySelector('li').insertAdjacentElement('afterbegin', image);
+//   return image;
 // });
+//   .reduce((accum, element) => {
+//     return (accum += element);
+//   }, '');
+
+// let gallery = document.querySelector('#gallery');
+// gallery.insertAdjacentHTML('afterbegin', insertImages);
+
+// -----------------------------------------------
+images.forEach(element => {
+  let gallery = document.querySelector('#gallery');
+  gallery.insertAdjacentHTML('afterbegin', '<li></li>');
+  gallery.classList.add('flexbox');
+
+  const image = document.createElement('img');
+  image.src = element.url;
+  image.alt = element.alt;
+  image.setAttribute('width', '90%');
+  image.setAttribute('height', '100%');
+
+  gallery.querySelector('li').insertAdjacentElement('afterbegin', image);
+});
