@@ -15,7 +15,7 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-
+// ------------------------Вариант 1-------------------
 const insertImages = images.map(element => {
   const liElement = document.createElement('li');
   const image = document.createElement('img');
@@ -29,3 +29,20 @@ const insertImages = images.map(element => {
 let gallery = document.querySelector('#gallery');
 gallery.append(...insertImages);
 gallery.classList.add('flexbox');
+
+// ------------Вариант 2--------------------------
+
+// images.forEach(element => {
+//   let gallery = document.querySelector('#gallery');
+//   gallery.insertAdjacentHTML('afterbegin', '<li></li>');
+//   gallery.classList.add('flexbox');
+
+//   const image = document.createElement('img');
+//   image.src = element.url;
+//   image.alt = element.alt;
+//   image.setAttribute('width', '90%');
+//   image.setAttribute('height', '100%');
+
+//   gallery.querySelector('li').insertAdjacentElement('afterbegin', image);
+// });
+// используя мап получается массив объектов.
