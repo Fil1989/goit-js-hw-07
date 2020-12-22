@@ -15,20 +15,28 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-// ------------------------Вариант 1-------------------
-const insertImages = images.map(element => {
-  const liElement = document.createElement('li');
-  const image = document.createElement('img');
-  image.src = element.url;
-  image.alt = element.alt;
-  image.setAttribute('width', '90%');
-  image.setAttribute('height', '100%');
-  liElement.append(image);
-  return liElement;
-});
-let gallery = document.querySelector('#gallery');
-gallery.append(...insertImages);
+const stringOfImages = images.reduce((accum, elem) => {
+  const elemImg = `<li><img src="${elem.url}" alt="${elem.alt}" width="90%" height="100%" ></li>`;
+  return (accum += elemImg);
+}, '');
+const gallery = document.querySelector('#gallery');
+gallery.insertAdjacentHTML('afterbegin', stringOfImages);
 gallery.classList.add('flexbox');
+
+// ------------------------Вариант 1-------------------
+// const insertImages = images.map(element => {
+//   const liElement = document.createElement('li');
+//   const image = document.createElement('img');
+//   image.src = element.url;
+//   image.alt = element.alt;
+//   image.setAttribute('width', '90%');
+//   image.setAttribute('height', '100%');
+//   liElement.append(image);
+//   return liElement;
+// });
+// let gallery = document.querySelector('#gallery');
+// gallery.append(...insertImages);
+// gallery.classList.add('flexbox');
 
 // ------------Вариант 2--------------------------
 

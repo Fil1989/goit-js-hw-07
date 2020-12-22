@@ -10,14 +10,10 @@ let counterValue = 0;
 const spanValue = document.querySelector('span#value');
 
 decrementBtn.addEventListener('click', () => {
-  const firstChild = document.querySelector('span#value').firstChild;
-  firstChild.remove();
   counterValue -= 1;
-  spanValue.insertAdjacentHTML('afterbegin', counterValue);
+  spanValue.textContent = counterValue;
 });
 incrementBtn.addEventListener('click', () => {
-  const firstChild = document.querySelector('span#value').firstChild;
-  firstChild.remove();
   counterValue += 1;
-  spanValue.insertAdjacentHTML('afterbegin', counterValue);
+  spanValue.textContent = counterValue;
 });
