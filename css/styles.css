@@ -1,6 +1,7 @@
 /* -------------------Завдання 3--------------- */
 .flexbox {
   display: flex;
+  /* justify-content: center; */
   list-style-type: none;
 }
 /* --------------------Завдання 6--------------- */
