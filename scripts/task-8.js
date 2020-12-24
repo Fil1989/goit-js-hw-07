@@ -1,3 +1,4 @@
+const fieldForNumber = document.querySelector('input[type="number"]');
 const fieldForBoxes = document.querySelector('#boxes');
 const renderBtn = document.querySelector('button[data-action="render"]');
 const destroyBtn = document.querySelector('button[data-action="destroy"]');
