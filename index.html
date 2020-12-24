@@ -58,12 +58,12 @@
         <button type="button" data-action="increment">+1</button>
       </div>
     </section>
-    <section>
+    <section class="pen">
       <h2>Task 5</h2>
       <input type="text" placeholder="Ваше ім'я?" id="name-input" />
       <h1>Привіт, <span id="name-output">незнайомець</span>!</h1>
     </section>
-    <section>
+    <section class="pencil">
       <h2>Task 6</h2>
       <input
         type="text"
@@ -80,6 +80,13 @@
     </section>
     <section>
       <h2>Task 8</h2>
+      <div id="controls">
+        <input type="number" min="0" max="100" step="1" />
+        <button type="button" data-action="render">Створити</button>
+        <button type="button" data-action="destroy">Очистити</button>
+      </div>
+
+      <div id="boxes"></div>
     </section>
     <script src="scripts/task-1.js" type="module"></script>
     <script src="scripts/task-2.js" type="module"></script>
@@ -88,6 +95,6 @@
     <script src="scripts/task-5.js" type="module"></script>
     <script src="scripts/task-6.js" type="module"></script>
     <script src="scripts/task-7.js" type="module"></script>
-    <!-- <script src="scripts/task-8.js" type="module"></script> -->
+    <script src="scripts/task-8.js" type="module"></script>
   </body>
 </html>

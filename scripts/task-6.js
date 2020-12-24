@@ -1,5 +1,5 @@
 const inputValue = document.querySelector('input#validation-input');
-inputValue.addEventListener('change', () => {
+const checkSymbolsAmount = () => {
   if (inputValue.value.length !== Number(inputValue.dataset.length)) {
     inputValue.classList.remove('valid');
     inputValue.classList.add('invalid');
@@ -8,4 +8,5 @@ inputValue.addEventListener('change', () => {
   inputValue.classList.remove('invalid');
   inputValue.classList.add('valid');
   return;
-});
+};
+inputValue.addEventListener('change', checkSymbolsAmount);
