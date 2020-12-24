@@ -24,3 +24,11 @@ const destroyBoxes = () => {
 };
 renderBtn.addEventListener('click', createBoxes);
 destroyBtn.addEventListener('click', destroyBoxes);
+// const someTeg = document.querySelector('#controls');
+// someTeg.addEventListener('click', createBoxes);
+
+// () => {
+//     const expl = document.createElement('div');
+//     expl.textContent = '12345';
+//     someTeg.append(expl);
+// }
